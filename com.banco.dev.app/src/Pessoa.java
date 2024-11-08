@@ -7,5 +7,6 @@ public class Pessoa {
   }
   Pessoa(String nome, int idade){
     this.nome = nome;
+    this.idade = idade;
   }
 }
