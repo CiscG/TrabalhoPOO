@@ -1,5 +1,5 @@
 package com.banco.dev.app
-ContaPoupanca{
+public class ContaPoupanca{
 
   
 }
