@@ -1,3 +1,3 @@
 package com.banco.dev.app
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
 }
