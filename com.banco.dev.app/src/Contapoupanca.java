@@ -1,5 +1,5 @@
 package com.banco.dev.app
-public class ContaPoupanca{
+public class ContaPoupanca extends Conta{
 
   
 }
