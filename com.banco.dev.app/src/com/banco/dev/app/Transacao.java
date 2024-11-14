@@ -1,4 +1,14 @@
 package com.banco.dev.app;
+
+import java.util.*;
+
 public class Transacao {
-    int valor;
+    float valor;
+    Date data;
+    String destino;
+
+    Transacao(){}
+    Transacao(float valor, String destino){
+
+    }
 }
