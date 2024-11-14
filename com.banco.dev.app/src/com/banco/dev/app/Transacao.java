@@ -7,7 +7,9 @@ public class Transacao {
     Date data;
     String destino;
 
+    //Construtores da classe mãe
     Transacao(){}
+    //Construotor recebendo parametros
     Transacao(float valor, String destino){
 
     }
