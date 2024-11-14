@@ -19,6 +19,9 @@ public class Pessoa {
     this.id = id;
     this.renda = renda;
   }
+  ///Os metodos vão ser inseridos de acordo com a necessidade da classe
+  /// Qualquer coisa só olhar a uml, mas se vc achar que poder adicionar algo
+  /// Pode ficar a vontade para fazer
   void SetNome(String nome){
 
     this.nome = nome;
