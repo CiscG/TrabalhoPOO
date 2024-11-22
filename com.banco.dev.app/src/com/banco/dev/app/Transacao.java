@@ -14,6 +14,14 @@ public class Transacao {
         this.valor = valor;
         this.data = data;
         this.destino = destino;
-
+    }
+    void SetValor(int valor){
+        this.valor = valor;
+    }
+    void SetData (Date data){
+        this.data = data;
+    }
+    void SetDestino(String destino){
+        this.destino = destino;
     }
 }
