@@ -5,6 +5,9 @@ public class TransacaoCorrente extends Transacao{
     //Construtor da classe filha, pois a classe filha não herda construtor
     TransacaoCorrente(){}
     TransacaoCorrente(float valor, String destinatario, String destino){
-
+        this.valor = valor;
+        this.destinatario = destinatario;
+        this.destino = destino;
     }
+    
 }
