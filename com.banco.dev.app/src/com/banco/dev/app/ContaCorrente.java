@@ -4,6 +4,7 @@ public class ContaCorrente extends Conta {
 
 
   /// Arraylist faltando de novo :)
+  /// Para add o ArrayList tem que dar import java.util.*.
   /// Inclusive, acho que organizei o código errado, depois a gente vê
 
   ContaCorrente() {
