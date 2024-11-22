@@ -8,12 +8,7 @@ public class TransacaoInvestimento extends Transacao {
         this.destino = destino;
         this.data = data;
     }
-    void VerificarCompra(int valor){
-        if(this.valor <= valor){
-            status = true;
-        }
-        else{
-            status = false;
-        }
+    void VerificarCompra(boolean status){
+        this.status = status;
     }
 }

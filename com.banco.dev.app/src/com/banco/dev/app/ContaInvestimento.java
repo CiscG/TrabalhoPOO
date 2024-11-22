@@ -22,9 +22,15 @@ public class ContaInvestimento extends Conta {
             compra.SetTaxa(taxa);
             compra.SetNome(nome);
             compra.SetValor(valor);
-
-
+            Date data = new Date();
+            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
+            extrato.VerificarCompra(true);
         }
-
+        else{
+            String nome = "aA";
+            Date data = new Date();
+            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
+            extrato.VerificarCompra(false);
+        }
     }
 }
