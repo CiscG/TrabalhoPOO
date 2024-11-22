@@ -17,4 +17,7 @@ public class ContaCorrente extends Conta {
     this.numeroConta = numeroConta;
     this.limite = limite;
   }
+  void SetLimite(int limite){
+    this.limite = limite;
+  }
 }
