@@ -52,6 +52,4 @@ public class Pessoa {
   float GetRenda(){
     return this.renda;
   }
-
-
 }
