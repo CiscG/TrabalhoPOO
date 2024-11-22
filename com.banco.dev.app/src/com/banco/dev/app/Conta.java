@@ -55,11 +55,7 @@ public class Conta {
 
     /// Confere aí, e o último não saquei muito bem
 
-    ArrayList<Object> GetHistoricoExtrato() {
-        return this.historicoExtrato;
-    }
-
-    void passagemDeMes(){
-
+    void GetHistoricoExtrato() {
+        //printar na tela o extrato
     }
 }
