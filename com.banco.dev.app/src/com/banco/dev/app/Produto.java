@@ -11,6 +11,15 @@ public class Produto {
     this.taxa = taxa;
     this.valor = valor;
   }
+  void SetNome(String nome){
+    this.nome = nome;
+  }
+  void SetTaxa(float taxa){
+    this.taxa = taxa;
+  }
+  void SetValor(float valor){
+    this.valor = valor;
+  }
 }
 
 ///Me perdi na uml :)
