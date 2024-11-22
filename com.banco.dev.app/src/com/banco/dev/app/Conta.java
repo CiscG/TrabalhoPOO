@@ -4,5 +4,10 @@ public class Conta{
   float saldo;
   int agencia;
   int numeroConta;
-
+}
+ void SetCliente(Pessoa Cliente){
+    this.cliente = cliente;
+  }
+Pessoa GetCliente(){
+  this.cliente = cliente;
 }
