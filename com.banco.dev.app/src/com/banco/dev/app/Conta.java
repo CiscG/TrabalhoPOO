@@ -7,10 +7,6 @@ public class Conta {
     int numeroConta;
     ArrayList<Object> historicoExtrato;
 
-    /// Tem que fazer o arraylist das transações
-
-    /// Em teoria o código tá certo, só vê o fim (lá não ta)
-
     Conta() {
     }
 
@@ -53,7 +49,6 @@ public class Conta {
         return this.numeroConta;
     }
 
-    /// Confere aí, e o último não saquei muito bem
 
     void GetHistoricoExtrato() {
         //printar na tela o extrato
