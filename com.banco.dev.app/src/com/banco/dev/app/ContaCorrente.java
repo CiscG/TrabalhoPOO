@@ -20,4 +20,9 @@ public class ContaCorrente extends Conta {
   void SetLimite(){
     this.limite = 20000;
   }
+  void TrasacaoCorrente(String destinatario)
+  {
+    TransacaoCorrente transacao = new TransacaoCorrente();
+
+  }
 }
