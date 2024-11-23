@@ -12,6 +12,7 @@ public class Transacao {
     //Construotor recebendo parametros
     Transacao(float valor, String destino, Date data){
         this.valor = valor;
+        //this.SetValor(valor);
         this.data = data;
         this.destino = destino;
     }
