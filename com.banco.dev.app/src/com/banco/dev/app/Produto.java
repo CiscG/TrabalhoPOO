@@ -13,16 +13,16 @@ public class Produto {
     this.taxa = taxa;
     this.valor = valor;
   }
-  void SetNome(String nome){
+  public void SetNome(String nome){
     this.nome = nome;
   }
-  void SetTipo(char tipo){
+  public void SetTipo(char tipo){
     this.tipo = tipo;
   }
-  void SetTaxa(float taxa){
+  public void SetTaxa(float taxa){
     this.taxa = taxa;
   }
-  void SetValor(float valor){
+  public void SetValor(float valor){
     this.valor = valor;
   }
 }
