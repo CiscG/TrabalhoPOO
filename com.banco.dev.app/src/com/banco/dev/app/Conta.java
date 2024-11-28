@@ -6,6 +6,7 @@ public class Conta {
     int agencia;
     int numeroConta;
     ArrayList<Object> historicoExtrato;
+    //Banco banco;
 
     Conta() {
     }
@@ -15,42 +16,54 @@ public class Conta {
         this.saldo = saldo;
         this.agencia = agencia;
         this.numeroConta = numeroConta;
+        //SetBanco(banco);
     }
 
-    void SetCliente(Pessoa Cliente) {
+    public void SetCliente(Pessoa Cliente) {
         this.cliente = cliente;
     }
 
-    void SetSaldo(float saldo) {
+    public void SetSaldo(float saldo) {
         this.saldo = saldo;
     }
 
-    void SetAgencia(int agencia) {
+    public void SetAgencia(int agencia) {
         this.agencia = agencia;
     }
 
-    void SetNumeroConta(int numeroConta) {
+    public void SetNumeroConta(int numeroConta) {
         this.numeroConta = numeroConta;
     }
 
-    Pessoa GetCliente() {
+    public Pessoa GetCliente() {
         return this.cliente;
     }
 
-    float GetSaldo() {
+    public float GetSaldo() {
         return this.saldo;
     }
 
-    int GetAgencia() {
+    public int GetAgencia() {
         return this.agencia;
     }
 
-    int GetNumeroConta() {
+    public int GetNumeroConta() {
         return this.numeroConta;
     }
 
+    /*public void SetBanco(Banco banco){
+        this.banco = banco;
+    }*/
 
-    void GetHistoricoExtrato() {
+    public void Deposito(float valor){
+        saldo += valor;
+    }
+
+    public void Saque(float valor){
+        saldo -= valor;
+    }
+
+    public void GetHistoricoExtrato() {
         //printar na tela o extrato
     }
 }
