@@ -2,17 +2,22 @@ package com.banco.dev.app;
 
 public class Produto {
   String nome;
+  char tipo;
   float taxa;
   float valor;
   Produto(){
   }
-  Produto(String nome, float taxa, float valor){
+  Produto(String nome, char tipo, float taxa, float valor){
     this.nome = nome;
+    this.tipo = tipo;
     this.taxa = taxa;
     this.valor = valor;
   }
   void SetNome(String nome){
     this.nome = nome;
+  }
+  void SetTipo(char tipo){
+    this.tipo = tipo;
   }
   void SetTaxa(float taxa){
     this.taxa = taxa;
@@ -21,5 +26,3 @@ public class Produto {
     this.valor = valor;
   }
 }
-
-///Me perdi na uml :)
