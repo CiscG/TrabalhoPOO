@@ -11,7 +11,7 @@ public class TransacaoCorrente extends Transacao{
         this.destino = destino;
         this.data = data;
     }
-    void SetDestinatario(String destinatario){
+    public void SetDestinatario(String destinatario){
         this.destinatario = destinatario;
     }
 }
