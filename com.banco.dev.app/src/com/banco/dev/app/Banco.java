@@ -12,17 +12,15 @@ public class Banco {
     this.CriaConta();
   }
   void CriaConta(){
+    //colocar recebimento por input para a 
     Conta conta = new Conta(CriarCliente(), 11111f, this, 11111);
     this.conta = conta;
   }
   Pessoa CriarCliente()
   {
+    // colocar recebimento de dados por input
     Pessoa cliente = new Pessoa("Rogerio", 11, "asdasdasd", 1111111, "asdasd", 111111, 12903812f);
     return cliente;
-  }
-  // vai ser usado se minha tentativa de acessar Banco pela Conta der errado!!!!!
-  public void TransacaoCorrenteEC(int destino, int destinatario){
-
   }
   void AdicaoConta(Conta conta)
   {
