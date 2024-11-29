@@ -7,7 +7,7 @@ public class Transacao {
     public Date data;
     public String destino;
 
-    //Construtores da classe mãe
+    ///Construtores da classe mãe
     Transacao(){}
     //Construotor recebendo parametros
     //Tu consegue colocar o metodo de SetData como private-
