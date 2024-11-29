@@ -31,6 +31,7 @@ public class Banco {
 
   public void PassagemDoMes(){
     // fazer passagem do mês e fazer os calculos dos produtos e das taxas da poupança
+    // Foreach onde se existe calcula taxas/criar metodos para cada tipo de conta realizar isso
   }
   public void SaveBanco()
   {
