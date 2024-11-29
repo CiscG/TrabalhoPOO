@@ -3,6 +3,7 @@ import java.util.*;
 public class Banco {
   int agencia;
   ArrayList<Object> contas;
+  //Variavel para execucao de testes
   public Conta conta;
   public Banco(){
   }
