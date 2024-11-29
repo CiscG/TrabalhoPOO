@@ -1,10 +1,10 @@
 package com.banco.dev.app;
 import java.util.*;
 public class Conta {
-    Pessoa cliente;
-    float saldo;
-    Banco agencia;
-    int numeroConta;
+    public Pessoa cliente;
+    public float saldo;
+    public Banco agencia;
+    public int numeroConta;
 
     ArrayList<Object> historicoExtrato;
     //Banco banco;
