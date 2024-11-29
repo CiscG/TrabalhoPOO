@@ -18,6 +18,7 @@ public class Transacao {
         this.valor = valor;
         //this.SetValor(valor);
         this.data = data;
+        //this.SetData();
         this.destino = destino;
     }
     public void SetValor(int valor){
