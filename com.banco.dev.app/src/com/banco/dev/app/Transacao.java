@@ -10,6 +10,8 @@ public class Transacao {
     //Construtores da classe mãe
     Transacao(){}
     //Construotor recebendo parametros
+    //Tu consegue colocar o metodo de SetData como private-
+    //-e colocar ele dentro do construtor que funciona
     Transacao(float valor, String destino, Date data){
         this.valor = valor;
         //this.SetValor(valor);
