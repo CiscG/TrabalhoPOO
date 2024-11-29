@@ -30,4 +30,11 @@ public class Banco {
   public void PassagemDoMes(){
     // fazer passagem do mês e fazer os calculos dos produtos e das taxas da poupança
   }
+  public void SaveBanco()
+  {
+    //Metodo para salvar banco em json
+  }
+  public void LoadBanco(){
+    //Metodo para carregar Banco via json
+  }
 }
