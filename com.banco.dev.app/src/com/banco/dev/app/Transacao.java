@@ -23,7 +23,7 @@ public class Transacao {
     public void SetValor(int valor){
         this.valor = valor;
     }
-    public void SetData (Date data){
+    private void SetData (Date data){
         this.data = data;
     }
     public void SetDestino(String destino){
