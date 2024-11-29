@@ -3,7 +3,7 @@ import java.util.*;
 public class ContaInvestimento extends Conta {
 
     ArrayList<Produto> produtos;
-    public ContaInvestimento(Pessoa cliente, float saldo, int agencia, int numeroConta){
+    public ContaInvestimento(Pessoa cliente, float saldo, Banco agencia, int numeroConta){
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;

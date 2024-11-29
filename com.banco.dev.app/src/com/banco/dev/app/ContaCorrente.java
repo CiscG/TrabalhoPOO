@@ -10,7 +10,7 @@ public class ContaCorrente extends Conta {
   public ContaCorrente() {
   }
 
-  public ContaCorrente(Pessoa cliente, int agencia, float saldo, int numeroConta, int limite) {
+  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo, int numeroConta, int limite) {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;

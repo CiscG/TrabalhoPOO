@@ -5,7 +5,7 @@ public class ContaPoupanca extends Conta {
   public ContaPoupanca() {
   }
 
-  public ContaPoupanca(Pessoa cliente, int agencia, float saldo, int numeroConta, float taxaPoupanca) {
+  public ContaPoupanca(Pessoa cliente, Banco agencia, float saldo, int numeroConta, float taxaPoupanca) {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;

@@ -3,15 +3,16 @@ import java.util.*;
 public class Conta {
     Pessoa cliente;
     float saldo;
-    int agencia;
+    Banco agencia;
     int numeroConta;
+
     ArrayList<Object> historicoExtrato;
     //Banco banco;
 
     Conta() {
     }
 
-    Conta(Pessoa cliente, float saldo, int agencia, int numeroConta) {
+    Conta(Pessoa cliente, float saldo, Banco agencia, int numeroConta) {
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
@@ -27,7 +28,7 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public void SetAgencia(int agencia) {
+    public void SetAgencia(Banco agencia) {
         this.agencia = agencia;
     }
 
@@ -44,7 +45,7 @@ public class Conta {
     }
 
     public int GetAgencia() {
-        return this.agencia;
+        return this.agencia.agencia;
     }
 
     public int GetNumeroConta() {
