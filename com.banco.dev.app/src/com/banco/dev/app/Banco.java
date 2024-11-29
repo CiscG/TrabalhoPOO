@@ -13,7 +13,8 @@ public class Banco {
     this.CriaConta();
   }
   void CriaConta(){
-    //colocar recebimento por input para a 
+    //colocar recebimento por input para a criacao de contas
+    //Teste para verificar uma ideia maluca que aparentemente deu certo
     Conta conta = new Conta(CriarCliente(), 11111f, this, 11111);
     this.conta = conta;
   }
