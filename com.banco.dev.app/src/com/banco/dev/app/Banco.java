@@ -2,6 +2,7 @@ package com.banco.dev.app;
 import java.util.*;
 public class Banco {
   int agencia;
+  //Preciso organizar esse caos desse ArrayList de contas
   ArrayList<Object> contas;
   //Variavel para execucao de testes
   public Conta conta;
