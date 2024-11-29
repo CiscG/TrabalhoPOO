@@ -2,7 +2,7 @@ package com.banco.dev.app;
 import java.util.*;
 //Extends para definir de qual classe ele herda atributos
 public class TransacaoCorrente extends Transacao{
-    String destinatario;
+    public String destinatario;
     //Construtor da classe filha, pois a classe filha não herda construtor
     TransacaoCorrente(){}
     TransacaoCorrente(float valor, String destinatario, String destino, Date data){
