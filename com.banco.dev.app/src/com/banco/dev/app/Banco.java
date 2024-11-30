@@ -22,6 +22,7 @@ public class Banco {
   Pessoa CriarCliente()
   {
     // colocar recebimento de dados por input
+    // colocar os parametro que o metodo deve receber
     Pessoa cliente = new Pessoa("Rogerio", 11, "asdasdasd", 1111111, "asdasd", 111111, 12903812f);
     return cliente;
   }
