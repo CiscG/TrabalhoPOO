@@ -28,6 +28,7 @@ public class Banco {
   }
   void AdicaoConta(Conta conta)
   {
+    //Verificar se vou manter um metodo a parte ou fazer isso diretamente na criacao de conta
     contas.add(conta);
   }
 
