@@ -52,7 +52,7 @@ public class Conta {
     public int GetNumeroConta() {
         return this.numeroConta;
     }
-
+    //Entra junto da analise da instancia do banco
     /*public void SetBanco(Banco banco){
         this.banco = banco;
     }*/
