@@ -9,6 +9,7 @@ public class Conta {
 
     ArrayList<Object> historicoExtrato;
     //Banco banco;
+    //Criar o random para o banco e para a conta
 
     Conta() {
     }
