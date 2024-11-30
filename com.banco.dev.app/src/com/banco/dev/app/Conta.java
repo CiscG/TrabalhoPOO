@@ -3,6 +3,7 @@ import java.util.*;
 public class Conta {
     public Pessoa cliente;
     public float saldo;
+    //Analisar a necessidade dessa instancia, se irei manter ou não
     public Banco agencia;
     public int numeroConta;
 
