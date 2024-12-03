@@ -4,14 +4,16 @@ public class ContaInvestimento extends Conta {
 
     ArrayList<TransacaoInvestimento> listaTransacoes;
     ArrayList<Produto> produtos;
+    
     public ContaInvestimento(Pessoa cliente, float saldo, Banco agencia, int numeroConta){
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
     }
+    
     public ContaInvestimento(){
-
     }
+    
     public void CompraProduto(float valor, String nome, float taxa){
         if(this.saldo >= valor){
             Random gerador = new Random();
@@ -35,6 +37,6 @@ public class ContaInvestimento extends Conta {
     }
 
     public void VenderProduto(String nome){
-
+        //fazer foreach verificando o nome do que qr ser vendido e somar o valor do produto com o saldo da conta
     }
 }
