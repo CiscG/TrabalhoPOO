@@ -61,11 +61,10 @@ public class Conta {
         this.banco = banco;
     }*/
     public void setNumeroDaConta(){
-        boolean ver = false;
+        boolean ver = true;
         int verificador = 0;
         do {
             verificador = gerador.nextInt(100000000,999999999);
-            ver = true;
             int size = agencia.contasPoupa.size();
             for (int i = 0; i <= size; i++){
                 ContaCorrente contaTemp = agencia.contasCorrent.get(i);
