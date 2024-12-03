@@ -15,6 +15,7 @@ public class ContaCorrente extends Conta {
     this.limite = limite;
   }
   public void SetLimite(){
+    //Colocar teste sobre o limite que será usado!!!!!!!!
     this.limite = 20000;
   }
   public void TrasacaoCorrente(int destino, float valor)
