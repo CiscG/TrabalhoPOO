@@ -24,35 +24,35 @@ public class Conta {
         //SetBanco(banco);
     }
 
-    public void SetCliente(Pessoa Cliente) {
+    public void setCliente(Pessoa Cliente) {
         this.cliente = cliente;
     }
 
-    public void SetSaldo(float saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 
-    public void SetAgencia(Banco agencia) {
+    public void setAgencia(Banco agencia) {
         this.agencia = agencia;
     }
 
-    public void SetNumeroConta(int numeroConta) {
+    public void setNumeroConta(int numeroConta) {
         this.numeroConta = numeroConta;
     }
 
-    public Pessoa GetCliente() {
+    public Pessoa getCliente() {
         return this.cliente;
     }
 
-    public float GetSaldo() {
+    public float getSaldo() {
         return this.saldo;
     }
 
-    public int GetAgencia() {
+    public int getAgencia() {
         return this.agencia.agencia;
     }
 
-    public int GetNumeroConta() {
+    public int getNumeroConta() {
         return this.numeroConta;
     }
     //Entra junto da analise da instancia do banco
