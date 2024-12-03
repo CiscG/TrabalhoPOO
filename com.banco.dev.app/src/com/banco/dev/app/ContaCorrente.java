@@ -1,7 +1,7 @@
 package com.banco.dev.app;
 public class ContaCorrente extends Conta {
   int limite;
-
+  ArrayList<TransacaoCorrente> listaTrasacoes;
   /// Para add o ArrayList tem que dar import java.util.*.
   /// Inclusive, acho que organizei o código errado, depois a gente vê
 
@@ -18,9 +18,11 @@ public class ContaCorrente extends Conta {
     //Colocar teste sobre o limite que será usado!!!!!!!!
     this.limite = 20000;
   }
-  public void TrasacaoCorrente(int destino, float valor)
+  public void TrasacaoCorrente(int destino, float valor, int destinatario)
   {
     Date data = new Date();
-    //TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, this.numeroConta, data);
+    //TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
+    listaTransacoes.add(transacao);
+
   }
 }
