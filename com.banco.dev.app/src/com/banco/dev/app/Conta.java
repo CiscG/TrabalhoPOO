@@ -1,14 +1,23 @@
 package com.banco.dev.app;
 import java.util.*;
 public class Conta {
+<<<<<<< HEAD
     Pessoa cliente;
     float saldo;
     Banco agencia;
     int numeroConta;
     Random gerador = new Random();
+=======
+    public Pessoa cliente;
+    public float saldo;
+    //Analisar a necessidade dessa instancia, se irei manter ou não
+    public Banco agencia;
+    public int numeroConta;
+>>>>>>> refs/remotes/origin/main
 
     ArrayList<Object> historicoExtrato;
     //Banco banco;
+    //Criar o random para o banco e para a conta
 
     Conta() {
     }
@@ -51,7 +60,7 @@ public class Conta {
     public int GetNumeroConta() {
         return this.numeroConta;
     }
-
+    //Entra junto da analise da instancia do banco
     /*public void SetBanco(Banco banco){
         this.banco = banco;
     }*/
@@ -74,7 +83,12 @@ public class Conta {
         saldo += valor;
     }
 
+<<<<<<< HEAD
     public void saque(float valor){
+=======
+    public void Saque(float valor){
+        //Fazer verificacao de possibilidade da operacao
+>>>>>>> refs/remotes/origin/main
         saldo -= valor;
     }
 

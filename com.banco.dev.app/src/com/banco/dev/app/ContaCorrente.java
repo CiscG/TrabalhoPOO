@@ -2,8 +2,6 @@ package com.banco.dev.app;
 public class ContaCorrente extends Conta {
   int limite;
 
-
-  /// Arraylist faltando de novo :)
   /// Para add o ArrayList tem que dar import java.util.*.
   /// Inclusive, acho que organizei o código errado, depois a gente vê
 
