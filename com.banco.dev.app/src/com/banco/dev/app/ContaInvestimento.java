@@ -17,6 +17,7 @@ public class ContaInvestimento extends Conta {
             Random gerador = new Random();
             ///Ainda precisa ser feita a entrada de dados e inserir ele no ArrayList
             ///Coloquei apenas um placeholder para criar o metodo, depois basta mudar para um input de taclado para receber os valores
+            //Analisar futuras mudanças
             taxa = gerador.nextFloat(0.1f, 0.15f);
             Produto compra = new Produto();
             compra.SetTaxa(taxa);
