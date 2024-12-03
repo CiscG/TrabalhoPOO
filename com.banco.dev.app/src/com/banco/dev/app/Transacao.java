@@ -24,10 +24,19 @@ public class Transacao {
     public void SetValor(int valor){
         this.valor = valor;
     }
+    public int GetValor(){
+        return this.valor;
+  }
     public void SetData (Date data){
         this.data = data;
     }
+     public Date GetvData(){
+        return this.data;
+  }
     public void SetDestino(String destino){
         this.destino = destino;
     }
+     public String GetDestino(){
+        return this.destino;
+  }
 }
