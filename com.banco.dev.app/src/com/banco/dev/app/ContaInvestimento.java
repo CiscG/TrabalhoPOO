@@ -14,9 +14,10 @@ public class ContaInvestimento extends Conta {
     }
     public void CompraProduto(float valor, String nome, float taxa){
         if(this.saldo >= valor){
+            Random gerador = new Random();
             ///Ainda precisa ser feita a entrada de dados e inserir ele no ArrayList
             ///Coloquei apenas um placeholder para criar o metodo, depois basta mudar para um input de taclado para receber os valores
-            //taxa = 
+            taxa = gerador.nextfloat();
             Produto compra = new Produto();
             compra.SetTaxa(taxa);
             compra.SetNome(nome);
