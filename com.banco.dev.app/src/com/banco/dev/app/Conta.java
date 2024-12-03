@@ -85,13 +85,7 @@ public class Conta {
     public void saque(float valor){
 
     }
-    public void Saque(float valor){
-        //Fazer verificacao de possibilidade da operacao
-
-        saldo -= valor;
-    }
-
-    public void GetHistoricoExtrato() {
+    public void getHistoricoExtrato() {
         //printar na tela o extrato
     }
 }
