@@ -63,7 +63,7 @@ public class Conta {
     public void setNumeroDaConta(){
         boolean ver = false;
         int verificador = 0;
-        while(!ver){
+        do {
             verificador = gerador.nextInt(100000000,999999999);
             ver = true;
             int size = agencia.contasPoupa.size();
@@ -74,7 +74,7 @@ public class Conta {
                     ver = false;
                 }
             }
-        }
+        } while(!ver)
         this.numeroConta = verificador;
     }
 
