@@ -12,11 +12,11 @@ public class ContaInvestimento extends Conta {
     public ContaInvestimento(){
 
     }
-    public void CompraProduto(float valor, String nome){
+    public void CompraProduto(float valor, String nome, float taxa){
         if(this.saldo >= valor){
             ///Ainda precisa ser feita a entrada de dados e inserir ele no ArrayList
             ///Coloquei apenas um placeholder para criar o metodo, depois basta mudar para um input de taclado para receber os valores
-            float taxa = 0;
+            //taxa = 
             Produto compra = new Produto();
             compra.SetTaxa(taxa);
             compra.SetNome(nome);
