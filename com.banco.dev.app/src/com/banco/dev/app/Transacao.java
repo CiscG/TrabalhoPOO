@@ -30,7 +30,7 @@ public class Transacao {
     public void SetData (Date data){
         this.data = data;
     }
-     public Date GetvData(){
+     public Date GetData(){
         return this.data;
   }
     public void SetDestino(String destino){
