@@ -24,7 +24,8 @@ public class Transacao {
     public void SetValor(int valor){
         this.valor = valor;
     }
-    public int GetValor(){
+    // Estava como int mas ela foi definida como float lá em cima
+    public float GetValor(){
         return this.valor;
   }
     public void SetData (Date data){
