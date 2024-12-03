@@ -78,11 +78,17 @@ public class Conta {
     }
 
     public void deposito(float valor){
-        saldo += valor;
+        this.saldo += valor;
     }
 
 
     public void saque(float valor){
+        if(valor <= this.saldo){
+            this.saldo-= valor;
+        }
+        else{
+            System.out.println("Valor do saque indisponivel");
+        }
 
     }
     public void getHistoricoExtrato() {
