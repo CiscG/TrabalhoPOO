@@ -14,7 +14,6 @@ public class ContaCorrente extends Conta {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;
-    this.numeroConta = numeroConta;
     this.limite = limite;
   }
   public void SetLimite(){

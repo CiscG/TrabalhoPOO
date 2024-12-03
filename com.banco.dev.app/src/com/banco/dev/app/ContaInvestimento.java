@@ -7,7 +7,6 @@ public class ContaInvestimento extends Conta {
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
-        this.numeroConta = numeroConta;
     }
     public ContaInvestimento(){
 

@@ -5,6 +5,7 @@ public class Conta {
     float saldo;
     Banco agencia;
     int numeroConta;
+    Random gerador = new Random();
 
     ArrayList<Object> historicoExtrato;
     //Banco banco;
@@ -16,7 +17,6 @@ public class Conta {
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
-        this.numeroConta = numeroConta;
         //SetBanco(banco);
     }
 
@@ -55,12 +55,26 @@ public class Conta {
     /*public void SetBanco(Banco banco){
         this.banco = banco;
     }*/
+    public void setNumeroDaConta(){
+        boolean ver = false;
+        int verificador = 0;
+        while(!ver){
+            verificador = gerador.nextInt(100000000,999999999);
+            ver = true;
+            int size = agencia.contasPoupa.size();
+            for (int i = 0; i <= size; i++){
+                Object contaTemp = agencia.contasPoupa.get(i);
+                if (contaTemp.getNumeroConta == ver);
+            }
+        }
+        this.numeroConta = verificador;
+    }
 
-    public void Deposito(float valor){
+    public void deposito(float valor){
         saldo += valor;
     }
 
-    public void Saque(float valor){
+    public void saque(float valor){
         saldo -= valor;
     }
 

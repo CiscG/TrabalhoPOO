@@ -2,16 +2,28 @@ package com.banco.dev.app;
 import java.util.*;
 public class Banco {
   int agencia;
-  ArrayList<Object> contas;
+  ArrayList<ContaInvestimento> contasInve;
+  ArrayList<ContaCorrente> contasCorrent;
+  ArrayList<ContaPoupanca> contasPoupa;
   //Variavel para execucao de testes
   public Conta conta;
   public Banco(){
   }
   public Banco(int agencia){
     this.agencia = agencia;
-    this.CriaConta();
+    //this.CriaConta();
   }
-  void CriaConta(){
+  void CriaContaInvest(){
+    //Template para teste
+    Conta conta = new Conta(CriarCliente(), 11111f, this, 11111);
+    this.conta = conta;
+  }
+  void CriaContaCorrent(){
+    //Template para teste
+    Conta conta = new Conta(CriarCliente(), 11111f, this, 11111);
+    this.conta = conta;
+  }
+  void CriaContaPoupa(){
     //Template para teste
     Conta conta = new Conta(CriarCliente(), 11111f, this, 11111);
     this.conta = conta;
@@ -28,7 +40,7 @@ public class Banco {
   }
   void AdicaoConta(Conta conta)
   {
-    contas.add(conta);
+    //contasPoupa.add(conta);
   }
 
   public void PassagemDoMes(){
