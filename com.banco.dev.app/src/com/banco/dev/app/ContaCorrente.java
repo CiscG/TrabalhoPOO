@@ -20,6 +20,6 @@ public class ContaCorrente extends Conta {
   public void TrasacaoCorrente(int destino, float valor)
   {
 
-    //TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, this.cliente.nome, );
+    //TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, this.contaNumero, );
   }
 }
