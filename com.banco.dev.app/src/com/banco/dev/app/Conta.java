@@ -81,12 +81,13 @@ public class Conta {
         saldo += valor;
     }
 
-<<<<<<< HEAD
+
     public void saque(float valor){
-=======
+
+    }
     public void Saque(float valor){
         //Fazer verificacao de possibilidade da operacao
->>>>>>> refs/remotes/origin/main
+
         saldo -= valor;
     }
 
