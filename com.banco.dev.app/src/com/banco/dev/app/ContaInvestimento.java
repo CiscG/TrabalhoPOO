@@ -2,6 +2,7 @@ package com.banco.dev.app;
 import java.util.*;
 public class ContaInvestimento extends Conta {
 
+    ArrayList<TransacaoInvestimento> listaTransacoes;
     ArrayList<Produto> produtos;
     public ContaInvestimento(Pessoa cliente, float saldo, Banco agencia, int numeroConta){
         this.cliente = cliente;
