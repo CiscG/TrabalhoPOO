@@ -1,19 +1,14 @@
 package com.banco.dev.app;
 import java.util.*;
 public class Conta {
-<<<<<<< HEAD
-    Pessoa cliente;
-    float saldo;
-    Banco agencia;
-    int numeroConta;
-    Random gerador = new Random();
-=======
+
+    public Random gerador = new Random();
     public Pessoa cliente;
     public float saldo;
     //Analisar a necessidade dessa instancia, se irei manter ou não
     public Banco agencia;
     public int numeroConta;
->>>>>>> refs/remotes/origin/main
+
 
     ArrayList<Object> historicoExtrato;
     //Banco banco;
@@ -72,8 +67,11 @@ public class Conta {
             ver = true;
             int size = agencia.contasPoupa.size();
             for (int i = 0; i <= size; i++){
-                Object contaTemp = agencia.contasPoupa.get(i);
-                if (contaTemp.getNumeroConta == ver);
+                ContaCorrente contaTemp = agencia.contasCorrent.get(i);
+                if (contaTemp.GetNumeroConta() == verificador);
+                {
+                    ver = false;
+                }
             }
         }
         this.numeroConta = verificador;
