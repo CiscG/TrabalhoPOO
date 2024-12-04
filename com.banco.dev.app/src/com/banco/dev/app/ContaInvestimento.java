@@ -41,11 +41,14 @@ public class ContaInvestimento extends Conta {
             Date data = new Date();
             TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
             extrato.VerificarCompra(true);
+            produtos.add(compra);
+
         }
         else{
             Date data = new Date();
             TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
             extrato.VerificarCompra(false);
+            listaTransacoes.add(extrato);
         }
     }
 
