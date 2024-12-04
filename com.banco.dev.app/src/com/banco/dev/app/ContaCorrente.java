@@ -26,6 +26,5 @@ public class ContaCorrente extends Conta {
     Date data = new Date();
     TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
     this.listaTrasacoes.add(transacao);
-
   }
 }
