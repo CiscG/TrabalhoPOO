@@ -1,4 +1,7 @@
 package com.banco.dev.app;
+
+import java.util.*;
+
 public class ContaCorrente extends Conta {
   int limite;
   ArrayList<TransacaoCorrente> listaTrasacoes;
@@ -21,8 +24,8 @@ public class ContaCorrente extends Conta {
   public void TrasacaoCorrente(int destino, float valor, int destinatario)
   {
     Date data = new Date();
-    //TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
-    listaTransacoes.add(transacao);
+    TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
+    this.listaTrasacoes.add(transacao);
 
   }
 }
