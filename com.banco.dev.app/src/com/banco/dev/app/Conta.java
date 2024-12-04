@@ -8,6 +8,7 @@ public class Conta {
     //Analisar a necessidade dessa instancia, se irei manter ou não
     public Banco agencia;
     public int numeroConta;
+    public ArrayList<Transacao> extrato;
 
 
     ArrayList<Object> historicoExtrato;
@@ -68,12 +69,18 @@ public class Conta {
 
     public void deposito(float valor){
         saldo += valor;
+        Date data = new Date();
+        Transacao deposito = new Transacao(valor, this.cliente.nome, data);
+        extrato.add(deposito);
     }
 
     public void Saque(float valor){
         if (valor <= saldo)
         {
             saldo -= valor;
+            Date data = new Date();
+            Transacao saque = new Transacao(valor, this.cliente.nome, data);
+            extrato.add(saque);
         }
         else{
             System.out.println("Valor para saque indisponivel");
@@ -81,6 +88,6 @@ public class Conta {
     }
 
     public void GetHistoricoExtrato() {
-        //printar na tela o extrato
+        extrato.forEach(transacao -> System.out.println(transacao.data + "  " + transacao.valor + " " + transacao.destino));
     }
 }

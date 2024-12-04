@@ -53,6 +53,9 @@ public class ContaInvestimento extends Conta {
     }
 
     public void VenderProduto(String nome){
-        //fazer foreach verificando o nome do que qr ser vendido e somar o valor do produto com o saldo da conta
+        //produtos.forEach(produto -> if(produto.getNome() == nome) {
+        //  this.valor += produto.getValor;
+        //  produtos.remove(produto);
+        // });
     }
 }
