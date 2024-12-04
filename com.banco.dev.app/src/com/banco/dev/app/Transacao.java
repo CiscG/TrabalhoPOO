@@ -21,23 +21,23 @@ public class Transacao {
         //this.SetData();
         this.destino = destino;
     }
-    public void SetValor(int valor){
+    public void setValor(int valor){
         this.valor = valor;
     }
     // Estava como int mas ela foi definida como float lá em cima
-    public float GetValor(){
+    public float getValor(){
         return this.valor;
   }
-    public void SetData (Date data){
+    public void setData (Date data){
         this.data = data;
     }
-     public Date GetData(){
+     public Date getData(){
         return this.data;
   }
-    public void SetDestino(String destino){
+    public void setDestino(String destino){
         this.destino = destino;
     }
-     public String GetDestino(){
+     public String getDestino(){
         return this.destino;
   }
 }
