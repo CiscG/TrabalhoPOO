@@ -18,26 +18,18 @@ public class Conta {
     }
 
     Conta(Pessoa cliente, float saldo, Banco agencia, int numeroConta) {
-        this.cliente = cliente;
+        this.SetCliente(cliente);
         this.saldo = saldo;
         this.agencia = agencia;
         //SetBanco(banco);
     }
 
-    public void SetCliente(Pessoa Cliente) {
+    public void SetCliente(Pessoa cliente) {
         this.cliente = cliente;
     }
 
     public void SetSaldo(float saldo) {
         this.saldo = saldo;
-    }
-
-    public void SetAgencia(Banco agencia) {
-        this.agencia = agencia;
-    }
-
-    public void SetNumeroConta(int numeroConta) {
-        this.numeroConta = numeroConta;
     }
 
     public Pessoa GetCliente() {
@@ -55,10 +47,7 @@ public class Conta {
     public int GetNumeroConta() {
         return this.numeroConta;
     }
-    //Entra junto da analise da instancia do banco
-    /*public void SetBanco(Banco banco){
-        this.banco = banco;
-    }*/
+
     public void setNumeroDaConta(){
         boolean ver = false;
         int verificador = 0;
@@ -81,14 +70,14 @@ public class Conta {
         saldo += valor;
     }
 
-
-    public void saque(float valor){
-
-    }
     public void Saque(float valor){
-        //Fazer verificacao de possibilidade da operacao
-
-        saldo -= valor;
+        if (valor <= saldo)
+        {
+            saldo -= valor;
+        }
+        else{
+            System.out.println("Valor para saque indisponivel");
+        }
     }
 
     public void GetHistoricoExtrato() {
