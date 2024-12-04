@@ -88,6 +88,6 @@ public class Conta {
     }
 
     public void GetHistoricoExtrato() {
-        extrato.forEach(transacao -> System.out.println(transacao.data + "  " + transacao.valor + " " + transacao.destino));
+        extrato.forEach(transacao -> System.out.println(transacao.GetData() + "  " + transacao.GetValor() + " " + transacao.GetDestino()));
     }
 }
