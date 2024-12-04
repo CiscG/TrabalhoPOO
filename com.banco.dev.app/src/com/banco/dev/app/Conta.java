@@ -65,7 +65,7 @@ public class Conta {
         while(!ver){
             verificador = gerador.nextInt(100000000,999999999);
             ver = true;
-            int size = agencia.contasPoupa.size();
+            int size = agencia.contasCorrent.size();
             for (int i = 0; i <= size; i++){
                 ContaCorrente contaTemp = agencia.contasCorrent.get(i);
                 if (contaTemp.GetNumeroConta() == verificador);
