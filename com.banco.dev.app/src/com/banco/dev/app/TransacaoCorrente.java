@@ -4,7 +4,7 @@ import java.util.*;
 public class TransacaoCorrente extends Transacao{
     public String destinatario;
     //Construtor da classe filha, pois a classe filha não herda construtor
-    TransacaoCorrente(float valor, int destino, int destinatario, Date data){}
+    TransacaoCorrente(){}
     TransacaoCorrente(float valor, String destinatario, int destino, Date data){
         this.valor = valor;
         this.destinatario = destinatario;
