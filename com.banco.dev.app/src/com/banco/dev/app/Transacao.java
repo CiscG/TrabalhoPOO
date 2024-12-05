@@ -13,10 +13,11 @@ public class Transacao {
     Transacao(float valor, String destino, Date data){
         this.valor = valor;
         //this.SetValor(valor);
-        this.SetData();
+        this.data = data;
+        Date data = new Date();
         this.destino = destino;
     }
-    public void setValor(int valor){
+    public void setValor(float valor){
         this.valor = valor;
     }
     // Estava como int mas ela foi definida como float lá em cima
