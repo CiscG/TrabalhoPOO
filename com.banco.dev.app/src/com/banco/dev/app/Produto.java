@@ -5,8 +5,8 @@ public class Produto {
   char tipo;
   float taxa;
   float valor;
-  Produto(){
-  }
+  
+  Produto(){}
   Produto(String nome, char tipo, float taxa, float valor){
     this.nome = nome;
     this.tipo = tipo;
@@ -16,7 +16,7 @@ public class Produto {
   public void setNome(String nome){
     this.nome = nome;
   }
-     public String getNome(){
+  public String getNome(){
         return this.nome;
   }
   public void setTipo(char tipo){
@@ -28,7 +28,7 @@ public class Produto {
   public void setValor(float valor){
     this.valor = valor;
   }
-     public float getValor(){
+  public float getValor(){
         return this.valor;
   }
 }
