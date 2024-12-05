@@ -13,8 +13,7 @@ public class Transacao {
     Transacao(float valor, String destino, Date data){
         this.valor = valor;
         //this.SetValor(valor);
-        this.data = data;
-        //this.SetData();
+        this.SetData();
         this.destino = destino;
     }
     public void setValor(int valor){
@@ -24,9 +23,6 @@ public class Transacao {
     public float getValor(){
         return this.valor;
   }
-    public void setData (Date data){
-        this.data = data;
-    }
      public Date getData(){
         return this.data;
   }
