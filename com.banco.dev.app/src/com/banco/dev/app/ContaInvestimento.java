@@ -5,7 +5,7 @@ public class ContaInvestimento extends Conta{
     ArrayList<TransacaoInvestimento> listaTransacoes;
     ArrayList<Produto> produtos;
     
-    public ContaInvestimento(Pessoa cliente, float saldo, Banco agencia, int numeroConta){
+    public ContaInvestimento(Pessoa cliente, float saldo, Banco agencia){
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
@@ -13,8 +13,29 @@ public class ContaInvestimento extends Conta{
     
     public ContaInvestimento(){
     }
-    
-    public void CompraProduto(float valor, int tipoDeProduto, float taxa){
+
+    @Override
+    public void setNumeroDaConta() {
+        boolean ver = false;
+        int verificador = 0;
+        while(!ver){
+            verificador = gerador.nextInt(100000,999999);
+            ver = true;
+            int size = agencia.contasPoupa.size();
+            for (int i = 0; i <= size; i++){
+                ContaCorrente contaTemp = agencia.contasCorrent.get(i);
+                if (contaTemp.getNumeroConta() == verificador);
+                {
+                    ver = false;
+                }
+            }
+        }
+        this.numeroConta = verificador;
+        System.out.println(this.getNumeroConta());
+    }
+
+    public void CompraProduto(float valor, int tipoDeProduto){
+        float taxa;
         String nome = "";
 
         if(this.saldo >= valor){
@@ -62,5 +83,8 @@ public class ContaInvestimento extends Conta{
                    produtos.remove(produto);
                }
            }
+    }
+    public void atualizarProdutos(){
+        produtos.forEach(produto -> produto.atualizarValor());
     }
 }

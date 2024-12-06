@@ -11,14 +11,14 @@ public class ContaCorrente extends Conta {
   public ContaCorrente() {
   }
 
-  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo, int limite) {
+  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo) {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;
-    this.limite = limite;
     setNumeroDaConta();
+    setLimite();
   }
-  public void SetLimite(){
+  public void setLimite(){
     this.limite = 20000;
   }
   public void TrasacaoCorrente(int destino, float valor, int destinatario)

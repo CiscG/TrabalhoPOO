@@ -34,4 +34,7 @@ public class Produto {
 
   public void SetNome(String nome) {
   }
+  public void atualizarValor(){
+    this.valor = this.valor * (this.taxa + 1);
+  }
 }

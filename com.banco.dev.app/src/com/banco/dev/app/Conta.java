@@ -16,7 +16,7 @@ public class Conta {
     }
 
     Conta(Pessoa cliente, float saldo, Banco agencia, int numeroConta) {
-        this.SetCliente(cliente);
+        this.setCliente(cliente);
         this.saldo = saldo;
         this.agencia = agencia;
     }
