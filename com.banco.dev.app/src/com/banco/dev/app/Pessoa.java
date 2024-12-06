@@ -40,16 +40,16 @@ public class Pessoa {
   void SetRenda(float renda){
     this.renda = renda;
   }
-  public String GetNome(){
+  public String getNomeetNome(){
     return this.nome;
   }
-  public int GetIdade() {
+  public int getIdade() {
     return this.idade;
   }
-  public int GetID(){
+  public int getID(){
     return this.id;
   }
-  public float GetRenda(){
+  public float getRenda(){
     return this.renda;
   }
 }

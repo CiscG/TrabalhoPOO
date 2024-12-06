@@ -89,6 +89,6 @@ public class Conta {
     }
 
     public void GetHistoricoExtrato() {
-        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getDestino()));
+        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
     }
 }
