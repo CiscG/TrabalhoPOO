@@ -70,7 +70,8 @@ public class Conta {
     public void deposito(float valor){
         saldo += valor;
         Date data = new Date();
-        Transacao deposito = new Transacao(valor, this.cliente.nome, data);
+
+        Transacao deposito = new Transacao(valor, this.numeroConta, data);
         extrato.add(deposito);
     }
 
@@ -79,7 +80,7 @@ public class Conta {
         {
             saldo -= valor;
             Date data = new Date();
-            Transacao saque = new Transacao(valor, this.cliente.nome, data);
+            Transacao saque = new Transacao(valor, this.numeroConta, data);
             extrato.add(saque);
         }
         else{
