@@ -13,9 +13,10 @@ public class Transacao {
     Transacao(float valor, int emissor, Date data){
         this.valor = valor;
         //this.SetValor(valor);
+        //Não precisava definir como Date, pois ele já estava definido nos parametros
+        data = new Date();
         this.data = data;
         this.emissor = emissor;
-        Date data = new Date();
     }
     public void setValor(float valor){
         this.valor = valor;
