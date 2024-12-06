@@ -3,6 +3,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Random gerador = new Random();
+        Pessoa novoCliente;
         boolean verificador = true;
         int opcao;
         Scanner scanner = new Scanner(System.in);
@@ -13,11 +14,25 @@ public class Main {
             opcao = scanner.nextInt();
             if (opcao < 1 || opcao > 4)
             {
-                System.out.println("Opcao invalida, digite novamente uma opcao valida");
+                System.out.println("Opção invalida, digite novamente uma opção valida");
                 verificador = false;
             }else{
                 verificador = true;
             }
         }while(!verificador);
+        switch (opcao){
+            case 1:
+                System.out.println("Nova Conta");
+                break;
+            case 2:
+                System.out.println("Acessar Conta");
+                break;
+            case 3:
+                System.out.println("Excluir conta");
+                break;
+            case 4:
+                System.out.println("Saida");
+                break;
+        }
     }
 }
