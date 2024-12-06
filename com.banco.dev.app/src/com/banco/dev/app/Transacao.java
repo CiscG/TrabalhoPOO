@@ -10,12 +10,11 @@ public class Transacao {
     ///Construtores da classe mãe
     Transacao(){}
     //Construotor recebendo parametros
-    Transacao(float valor, int emissor, Date data){
+    Transacao(float valor, int emissor){
         this.valor = valor;
         //this.SetValor(valor);
         //Não precisava definir como Date, pois ele já estava definido nos parametros
-        data = new Date();
-        this.data = data;
+        this.data = new Date();
         this.emissor = emissor;
     }
     public void setValor(float valor){

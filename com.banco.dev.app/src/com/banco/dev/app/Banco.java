@@ -33,4 +33,17 @@ public class Banco {
     contasPoupa.forEach(contaPoupanca -> contaPoupanca.setTaxaConta());
     contasInve.forEach(contaInve -> contaInve.atualizarProdutos());
   }
+
+  public void transacaoCorrente(int contaEnvio, int contaReceb, float valor){
+    contasCorrent.forEach(contaCorrente -> {
+      if(contaCorrente.numeroConta == contaEnvio){
+        contaCorrente.TrasacaoCorrente(contaReceb, valor, contaEnvio);
+        contaCorrente.saldo -= valor;
+      }else if(contaCorrente.numeroConta == contaReceb){
+        contaCorrente.TrasacaoCorrente(contaReceb, valor, contaEnvio);
+        contaCorrente.saldo += valor;
+      }
+    });
+
+  }
 }

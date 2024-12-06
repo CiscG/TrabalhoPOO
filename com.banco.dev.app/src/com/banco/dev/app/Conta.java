@@ -66,9 +66,7 @@ public class Conta {
 
     public void deposito(float valor){
         saldo += valor;
-        Date data = new Date();
-
-        Transacao recebimento = new Transacao(valor, this.numeroConta, data);
+        Transacao recebimento = new Transacao(valor, this.numeroConta);
         extrato.add(recebimento);
     }
 
@@ -76,8 +74,7 @@ public class Conta {
         if (valor <= saldo)
         {
             saldo -= valor;
-            Date data = new Date();
-            Transacao saque = new Transacao(valor, this.numeroConta, data);
+            Transacao saque = new Transacao(valor, this.numeroConta);
             extrato.add(saque);
         }
         else{

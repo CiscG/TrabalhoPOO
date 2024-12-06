@@ -23,8 +23,7 @@ public class ContaCorrente extends Conta {
   }
   public void TrasacaoCorrente(int destino, float valor, int destinatario)
   {
-    Date data = new Date();
-    TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
+    TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario);
     this.listaTrasacoes.add(transacao);
   }
 
@@ -35,7 +34,7 @@ public class ContaCorrente extends Conta {
     {
       saldo -= valor;
       Date data = new Date();
-      Transacao saque = new Transacao(valor, this.numeroConta, data);
+      Transacao saque = new Transacao(valor, this.numeroConta);
       extrato.add(saque);
     }
     else{
