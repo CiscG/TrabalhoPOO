@@ -9,6 +9,7 @@ public class ContaInvestimento extends Conta{
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
+        setNumeroDaConta();
     }
     
     public ContaInvestimento(){
@@ -34,17 +35,14 @@ public class ContaInvestimento extends Conta{
         System.out.println(this.getNumeroConta());
     }
 
-    public void CompraProduto(float valor, int tipoDeProduto){
+    public void compraProduto(float valor, int tipoDeProduto){
         float taxa;
         String nome = "";
-
+        
         if(this.saldo >= valor){
+
             Random gerador = new Random();
-            ///Ainda precisa ser feita a entrada de dados e inserir ele no ArrayList
-            ///Coloquei apenas um placeholder para criar o metodo, depois basta mudar para um input de taclado para receber os valores
-            //Analisar futuras mudanças
             taxa = gerador.nextFloat(0.1f, 0.15f);
-            tipoDeProduto = gerador.nextInt(1,3);
 
             switch (tipoDeProduto){
                 case 1:
@@ -54,7 +52,7 @@ public class ContaInvestimento extends Conta{
                     nome = "CDB";
                     break;
                 case 3:
-                    nome = " ";
+                    nome = "LCI";
                     break;
             }
 
@@ -65,6 +63,7 @@ public class ContaInvestimento extends Conta{
             Date data = new Date();
             TransacaoInvestimento extrato = new TransacaoInvestimento(valor, this.numeroConta, data);
             extrato.VerificarCompra(true);
+            listaTransacoes.add(extrato);
             produtos.add(compra);
 
         }
@@ -77,7 +76,7 @@ public class ContaInvestimento extends Conta{
         }
     }
 
-    public void VenderProduto(String nome){
+    public void venderProduto(String nome){
            for(Produto produto : produtos){
                if(produto.getNome().equals(nome)){
                    produtos.remove(produto);
