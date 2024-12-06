@@ -11,14 +11,14 @@ public class ContaCorrente extends Conta {
   public ContaCorrente() {
   }
 
-  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo, int numeroConta, int limite) {
+  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo, int limite) {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;
     this.limite = limite;
+    setNumeroDaConta();
   }
   public void SetLimite(){
-    //Colocar teste sobre o limite que será usado!!!!!!!!
     this.limite = 20000;
   }
   public void TrasacaoCorrente(int destino, float valor, int destinatario)
@@ -26,5 +26,20 @@ public class ContaCorrente extends Conta {
     Date data = new Date();
     TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario, data);
     this.listaTrasacoes.add(transacao);
+  }
+
+  @Override
+  public void saque(float valor) {
+    float total = this.saldo + this.limite;
+    if (valor <= total)
+    {
+      saldo -= valor;
+      Date data = new Date();
+      Transacao saque = new Transacao(valor, this.numeroConta, data);
+      extrato.add(saque);
+    }
+    else{
+      System.out.println("Valor para saque indisponivel");
+    }
   }
 }

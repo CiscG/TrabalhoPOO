@@ -5,11 +5,11 @@ public class Main {
         Random gerador = new Random();
         Pessoa novoCliente;
         boolean verificador = true;
+        boolean emOpera = true;
         int opcao;
         Scanner scanner = new Scanner(System.in);
-        Banco agencia = new Banco(gerador.nextInt(10000, 99999));
+        Banco agencia = new Banco(gerador.nextInt(1000, 9999));
         do{
-            //verificador = true;
             System.out.println("Digite a operação desejada");
             opcao = scanner.nextInt();
             if (opcao < 1 || opcao > 4)

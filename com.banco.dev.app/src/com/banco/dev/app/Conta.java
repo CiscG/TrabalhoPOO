@@ -21,27 +21,27 @@ public class Conta {
         this.agencia = agencia;
     }
 
-    public void SetCliente(Pessoa cliente) {
+    public void setCliente(Pessoa cliente) {
         this.cliente = cliente;
     }
 
-    public void SetSaldo(float saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 
-    public Pessoa GetCliente() {
+    public Pessoa getCliente() {
         return this.cliente;
     }
 
-    public float GetSaldo() {
+    public float getSaldo() {
         return this.saldo;
     }
 
-    public int GetAgencia() {
+    public int getAgencia() {
         return this.agencia.agencia;
     }
 
-    public int GetNumeroConta() {
+    public int getNumeroConta() {
         return this.numeroConta;
     }
 
@@ -54,13 +54,14 @@ public class Conta {
             int size = agencia.contasPoupa.size();
             for (int i = 0; i <= size; i++){
                 ContaCorrente contaTemp = agencia.contasCorrent.get(i);
-                if (contaTemp.GetNumeroConta() == verificador);
+                if (contaTemp.getNumeroConta() == verificador);
                 {
                     ver = false;
                 }
             }
         }
         this.numeroConta = verificador;
+        System.out.println(this.getNumeroConta());
     }
 
     public void deposito(float valor){
@@ -71,7 +72,7 @@ public class Conta {
         extrato.add(recebimento);
     }
 
-    public void Saque(float valor){
+    public void saque(float valor){
         if (valor <= saldo)
         {
             saldo -= valor;
@@ -83,8 +84,7 @@ public class Conta {
             System.out.println("Valor para saque indisponivel");
         }
     }
-    public void receberTransacao(Transacao transacao)
-    {
+    public void receberTransacao(Transacao transacao) {
         extrato.add(transacao);
     }
     public void GetHistoricoExtrato() {
