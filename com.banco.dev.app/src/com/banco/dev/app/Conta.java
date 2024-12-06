@@ -9,9 +9,6 @@ public class Conta {
     public Banco agencia;
     public int numeroConta;
     public ArrayList<Transacao> extrato;
-
-
-    ArrayList<Object> historicoExtrato;
     //Banco banco;
     //Criar o random para o banco e para a conta
 
@@ -22,7 +19,6 @@ public class Conta {
         this.SetCliente(cliente);
         this.saldo = saldo;
         this.agencia = agencia;
-        //SetBanco(banco);
     }
 
     public void SetCliente(Pessoa cliente) {
@@ -71,8 +67,8 @@ public class Conta {
         saldo += valor;
         Date data = new Date();
 
-        Transacao deposito = new Transacao(valor, this.numeroConta, data);
-        extrato.add(deposito);
+        Transacao recebimento = new Transacao(valor, this.numeroConta, data);
+        extrato.add(recebimento);
     }
 
     public void Saque(float valor){
@@ -87,7 +83,10 @@ public class Conta {
             System.out.println("Valor para saque indisponivel");
         }
     }
-
+    public void receberTransacao(Transacao transacao)
+    {
+        extrato.add(transacao);
+    }
     public void GetHistoricoExtrato() {
         extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
     }
