@@ -5,17 +5,17 @@ import java.util.*;
 public class Transacao {
     public float valor;
     public Date data;
-    public String destino;
+    public int emissor;
 
     ///Construtores da classe mãe
     Transacao(){}
     //Construotor recebendo parametros
-    Transacao(float valor, String destino, Date data){
+    Transacao(float valor, int emissor, Date data){
         this.valor = valor;
         //this.SetValor(valor);
         this.data = data;
+        this.emissor = emissor;
         Date data = new Date();
-        this.destino = destino;
     }
     public void setValor(float valor){
         this.valor = valor;
@@ -27,10 +27,10 @@ public class Transacao {
      public Date getData(){
         return this.data;
   }
-    public void setDestino(String destino){
-        this.destino = destino;
+    public void setEmissor(int emissor){
+        this.emissor = emissor;
     }
-     public String getDestino(){
-        return this.destino;
+     public int getEmissor(){
+        return this.emissor;
   }
 }
