@@ -3,9 +3,9 @@ import java.util.*;
 public class TransacaoInvestimento extends Transacao {
     boolean status;
     TransacaoInvestimento(){}
-    TransacaoInvestimento(float valor, String destino,Date data){
+    TransacaoInvestimento(float valor, int emissor ,Date data){
         this.valor =  valor;
-        this.destino = destino;
+        this.emissor = emissor;
         this.data = data;
     }
     public void VerificarCompra(boolean status){
