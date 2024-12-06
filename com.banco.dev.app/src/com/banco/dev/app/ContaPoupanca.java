@@ -3,7 +3,6 @@ import java.util.*;
 
 public class ContaPoupanca extends Conta {
   float taxaPoupanca;
-
   public ContaPoupanca() {
   }
 
@@ -17,19 +16,16 @@ public class ContaPoupanca extends Conta {
 
   @Override
   public void setNumeroDaConta() {
-    boolean ver = false;
-    int verificador = 0;
-    while(!ver){
-      verificador = gerador.nextInt(10000000,99999999);
-      ver = true;
-      int size = agencia.contasPoupa.size();
-      for (int i = 0; i <= size; i++){
-        ContaCorrente contaTemp = agencia.contasCorrent.get(i);
-        if (contaTemp.getNumeroConta() == verificador);
+    this.ver = false;
+    while(!this.ver){
+      this.verificador = gerador.nextInt(10000000,99999999);
+      this.ver = true;
+      this.agencia.contasPoupa.forEach(contaPoupanca -> {
+        if (contaPoupanca.getNumeroConta() == this.verificador);
         {
-          ver = false;
+          this.ver = false;
         }
-      }
+      });
     }
     this.numeroConta = verificador;
     System.out.println(this.getNumeroConta());

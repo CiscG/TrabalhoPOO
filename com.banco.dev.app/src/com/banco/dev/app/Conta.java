@@ -5,6 +5,8 @@ public class Conta {
     public Random gerador = new Random();
     public Pessoa cliente;
     public float saldo;
+    public boolean ver;
+    public int verificador;
     //Analisar a necessidade dessa instancia, se irei manter ou não
     public Banco agencia;
     public int numeroConta;
@@ -46,19 +48,16 @@ public class Conta {
     }
 
     public void setNumeroDaConta(){
-        boolean ver = false;
-        int verificador = 0;
-        while(!ver){
-            verificador = gerador.nextInt(100000000,999999999);
-            ver = true;
-            int size = agencia.contasPoupa.size();
-            for (int i = 0; i <= size; i++){
-                ContaCorrente contaTemp = agencia.contasCorrent.get(i);
-                if (contaTemp.getNumeroConta() == verificador);
+        this.ver = false;
+        while(!this.ver){
+            this.verificador = gerador.nextInt(10000000,99999999);
+            this.ver = true;
+            this.agencia.contasCorrent.forEach(contaPoupanca -> {
+                if (contaPoupanca.getNumeroConta() == this.verificador);
                 {
-                    ver = false;
+                    this.ver = false;
                 }
-            }
+            });
         }
         this.numeroConta = verificador;
         System.out.println(this.getNumeroConta());
