@@ -35,18 +35,18 @@ public class ContaInvestimento extends Conta {
                     break;
             }
             Produto compra = new Produto();
-            compra.SetTaxa(taxa);
-            compra.SetNome(nome);
-            compra.SetValor(valor);
+            compra.setTaxa(taxa);
+            compra.setNome(nome);
+            compra.setValor(valor);
             Date data = new Date();
-            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
+            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, this.numeroConta, data);
             extrato.VerificarCompra(true);
             produtos.add(compra);
 
         }
         else{
             Date data = new Date();
-            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, nome, data);
+            TransacaoInvestimento extrato = new TransacaoInvestimento(valor, this.numeroConta, data);
             extrato.VerificarCompra(false);
             listaTransacoes.add(extrato);
         }
