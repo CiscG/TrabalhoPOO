@@ -83,4 +83,10 @@ public class ContaInvestimento extends Conta{
     public void atualizarProdutos(){
         produtos.forEach(produto -> produto.atualizarValor());
     }
+
+    @Override
+    public void GetHistoricoExtrato() {
+        listaTransacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " " + transacao.getStatus()));
+        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+    }
 }

@@ -41,4 +41,10 @@ public class ContaCorrente extends Conta {
       System.out.println("Valor para saque indisponivel");
     }
   }
+
+  @Override
+  public void GetHistoricoExtrato() {
+    listaTrasacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " "+ transacao.getDestinatario()));
+    extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+  }
 }
