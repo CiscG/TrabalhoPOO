@@ -7,7 +7,7 @@ public class Main {
         int opcao;
         Scanner scanner = new Scanner(System.in);
         Banco agencia = new Banco(gerador.nextInt(10000, 99999));
-        while(verificador){
+        do{
             //verificador = true;
             System.out.println("Digite a operação desejada");
             opcao = scanner.nextInt();
@@ -15,9 +15,9 @@ public class Main {
             {
                 System.out.println("Opcao invalida, digite novamente uma opcao valida");
                 verificador = false;
-                System.out.println(verificador);
+            }else{
+                verificador = true;
             }
-        }
-        System.out.println("Saiu");
+        }while(!verificador);
     }
 }
