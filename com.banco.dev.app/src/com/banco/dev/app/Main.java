@@ -14,7 +14,7 @@ public class Main {
             opcao = scanner.nextInt();
             if (opcao < 1 || opcao > 4)
             {
-                System.out.println("Opção invalida, digite novamente uma opção valida");
+                System.out.println("Opção inválida, digite novamente uma opção valida");
                 verificador = false;
             }else{
                 verificador = true;
