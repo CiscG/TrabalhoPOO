@@ -1,6 +1,6 @@
 package com.banco.dev.app;
 import java.util.*;
-public class ContaInvestimento extends Conta {
+public class ContaInvestimento extends Conta{
 
     ArrayList<TransacaoInvestimento> listaTransacoes;
     ArrayList<Produto> produtos;
@@ -16,6 +16,7 @@ public class ContaInvestimento extends Conta {
     
     public void CompraProduto(float valor, int tipoDeProduto, float taxa){
         String nome = "";
+
         if(this.saldo >= valor){
             Random gerador = new Random();
             ///Ainda precisa ser feita a entrada de dados e inserir ele no ArrayList
@@ -23,6 +24,7 @@ public class ContaInvestimento extends Conta {
             //Analisar futuras mudanças
             taxa = gerador.nextFloat(0.1f, 0.15f);
             tipoDeProduto = gerador.nextInt(1,3);
+
             switch (tipoDeProduto){
                 case 1:
                     nome = "CDI";
@@ -34,6 +36,7 @@ public class ContaInvestimento extends Conta {
                     nome = " ";
                     break;
             }
+
             Produto compra = new Produto();
             compra.setTaxa(taxa);
             compra.setNome(nome);
@@ -44,6 +47,7 @@ public class ContaInvestimento extends Conta {
             produtos.add(compra);
 
         }
+
         else{
             Date data = new Date();
             TransacaoInvestimento extrato = new TransacaoInvestimento(valor, this.numeroConta, data);
@@ -53,9 +57,10 @@ public class ContaInvestimento extends Conta {
     }
 
     public void VenderProduto(String nome){
-        //produtos.forEach(produto -> if(produto.getNome() == nome) {
-        //  this.valor += produto.getValor;
-        //  produtos.remove(produto);
-        // });
+           for(Produto produto : produtos){
+               if(produto.getNome().equals(nome)){
+                   produtos.remove(produto);
+               }
+           }
     }
 }
