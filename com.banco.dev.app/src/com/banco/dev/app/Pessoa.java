@@ -10,7 +10,7 @@ public class Pessoa {
   
   Pessoa(){ }
 
-  Pessoa(String nome, int idade, int numeroCelular, String tipoDePessoa, int id, float renda){
+  Pessoa(String nome, int idade, int numeroCelular, int id, float renda){
     this.nome = nome;
     this.idade = idade;
     this.numeroCelular = numeroCelular;
