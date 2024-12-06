@@ -39,6 +39,7 @@ public class Banco {
       if(contaCorrente.numeroConta == contaEnvio){
         contaCorrente.TrasacaoCorrente(contaReceb, valor, contaEnvio);
         contaCorrente.saldo -= valor;
+
       }else if(contaCorrente.numeroConta == contaReceb){
         contaCorrente.TrasacaoCorrente(contaReceb, valor, contaEnvio);
         contaCorrente.saldo += valor;

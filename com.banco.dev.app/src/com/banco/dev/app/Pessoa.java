@@ -14,7 +14,6 @@ public class Pessoa {
     this.nome = nome;
     this.idade = idade;
     this.numeroCelular = numeroCelular;
-    this.tipoDePessoa = tipoDePessoa;
     this.id = id;
     this.renda = renda;
   }
