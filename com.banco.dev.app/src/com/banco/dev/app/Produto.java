@@ -31,4 +31,7 @@ public class Produto {
   public float getValor(){
         return this.valor;
   }
+
+  public void SetNome(String nome) {
+  }
 }

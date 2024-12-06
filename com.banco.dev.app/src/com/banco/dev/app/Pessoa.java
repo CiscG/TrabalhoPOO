@@ -22,25 +22,25 @@ public class Pessoa {
   ///Os metodos vão ser inseridos de acordo com a necessidade da classe
   /// Qualquer coisa só olhar a uml, mas se vc achar que poder adicionar algo
   /// Pode ficar a vontade para fazer
-  void SetNome(String nome){
+  public void SetNome(String nome){
     this.nome = nome;
   }
-  void SetIdade(int idade){
+  public void SetIdade(int idade){
     this.idade = idade;
   }
-  void SetEmail(String email){
+  public void SetEmail(String email){
     this.email = email;
   }
-  void SetNumeroCelular(int numeroCelular){
+  public void SetNumeroCelular(int numeroCelular){
     this.numeroCelular = numeroCelular;
   }
-  void SetID(int id){
+  public void SetID(int id){
     this.id = id;
   }
-  void SetRenda(float renda){
+  public void SetRenda(float renda){
     this.renda = renda;
   }
-  public String getNomeetNome(){
+  public String getNome(){
     return this.nome;
   }
   public int getIdade() {
