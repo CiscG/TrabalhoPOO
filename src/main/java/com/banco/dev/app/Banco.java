@@ -11,7 +11,6 @@ public class Banco {
   }
 
   public Banco(int agencia){
-    this.agencia = agencia;
     this.contasInve = new ArrayList<ContaInvestimento>();
     this.contasCorrent = new ArrayList<ContaCorrente>();
     this.contasPoupa = new ArrayList<ContaPoupanca>();

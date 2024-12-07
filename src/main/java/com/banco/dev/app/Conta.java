@@ -2,7 +2,7 @@ package com.banco.dev.app;
 import java.util.*;
 public class Conta {
 
-    public Random gerador = new Random();
+    public static Random gerador = new Random();
     public Pessoa cliente;
     public double saldo;
     public boolean ver;
