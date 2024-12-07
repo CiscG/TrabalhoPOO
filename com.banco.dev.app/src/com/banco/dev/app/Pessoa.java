@@ -2,15 +2,14 @@ package com.banco.dev.app;
 public class Pessoa {
   String nome;
   int idade;
-
   int numeroCelular;
   String tipoDePessoa;
   int id;
-  float renda;
+  public double renda;
   
   Pessoa(){ }
 
-  Pessoa(String nome, int idade, int numeroCelular, int id, float renda){
+  Pessoa(String nome, int idade, int numeroCelular, int id, double renda){
     this.nome = nome;
     this.idade = idade;
     this.numeroCelular = numeroCelular;
@@ -34,8 +33,8 @@ public class Pessoa {
     this.id = id;
   }
 
-  public void setRenda(float renda){
-    this.renda = renda;
+  public void setRenda(double valor){
+    this.renda = valor;
   }
 
   public String getNome(){
@@ -50,7 +49,7 @@ public class Pessoa {
     return this.id;
   }
 
-  public float getRenda(){
+  public double getRenda(){
     return this.renda;
   }
 }
