@@ -1,8 +1,7 @@
 package com.banco.dev.app;
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class Main {
+public class TrabalhoPOO {
     public static void main(String[] args) {
         Random gerador = new Random();
         Pessoa novoCliente;
@@ -36,9 +35,9 @@ public class Main {
         novoCliente.setID(scanner.nextInt());
 
         System.out.println("Digite sua Renda");
-        novoCliente.setRenda(scanner.nextFloat());
+        novoCliente.setRenda(scanner.nextDouble());
 
-        contaCorrtemp = new ContaCorrente(novoCliente, agencia, 0f);
+        contaCorrtemp = new ContaCorrente(novoCliente, agencia, 0);
         contaCorrtemp.deposito(novoCliente.getRenda() * 4);
         numeroContaCor[0] = contaCorrtemp.getNumeroConta();
         agencia.contasCorrent.add(contaCorrtemp);
@@ -46,6 +45,7 @@ public class Main {
         System.out.println("Conta Corrente 2");
 
         novoCliente = new Pessoa();
+        scanner = new Scanner(System.in);
 
         System.out.println("Digite seu nome");
         novoCliente.setNome(scanner.nextLine());
@@ -63,7 +63,7 @@ public class Main {
         novoCliente.setRenda(scanner.nextFloat());
 
         contaCorrtemp = new ContaCorrente(novoCliente, agencia, 0f);
-        contaCorrtemp.deposito(novoCliente.getRenda() * 4);
+        contaCorrtemp.deposito(novoCliente.getRenda());
         numeroContaCor[1] = contaCorrtemp.getNumeroConta();
         agencia.contasCorrent.add(contaCorrtemp);
 
@@ -78,6 +78,7 @@ public class Main {
         System.out.println("Conta Poupança");
 
         novoCliente = new Pessoa();
+        scanner = new Scanner(System.in);
 
         System.out.println("Digite seu nome");
         novoCliente.setNome(scanner.nextLine());
@@ -107,7 +108,8 @@ public class Main {
         System.out.println("Conta Investimento");
 
         novoCliente = new Pessoa();
-
+        scanner = new Scanner(System.in);
+                
         System.out.println("Digite seu nome");
         novoCliente.setNome(scanner.nextLine());
 
