@@ -2,14 +2,14 @@ package com.banco.dev.app;
 
 public class Produto {
   String nome;
-  char tipo;
+  //char tipo;
   float taxa;
   float valor;
   
   Produto(){}
-  Produto(String nome, char tipo, float taxa, float valor){
+  Produto(String nome, float taxa, float valor){
     this.nome = nome;
-    this.tipo = tipo;
+    //this.tipo = tipo;
     this.taxa = taxa;
     this.valor = valor;
   }
@@ -19,9 +19,9 @@ public class Produto {
   public String getNome(){
         return this.nome;
   }
-  public void setTipo(char tipo){
+  /*public void setTipo(char tipo){
     this.tipo = tipo;
-  }
+  }*/
   public void setTaxa(float taxa){
     this.taxa = taxa;
   }
