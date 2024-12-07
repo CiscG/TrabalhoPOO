@@ -1,7 +1,7 @@
 package com.banco.dev.app;
 import java.util.*;
 public class Banco {
-  int agencia;
+    int agencia;
 
   ArrayList<ContaInvestimento> contasInve;
   ArrayList<ContaCorrente> contasCorrent;
@@ -12,6 +12,9 @@ public class Banco {
 
   public Banco(int agencia){
     this.agencia = agencia;
+    this.contasInve = new ArrayList<ContaInvestimento>();
+    this.contasCorrent = new ArrayList<ContaCorrente>();
+    this.contasPoupa = new ArrayList<ContaPoupanca>();
   }
 
   void CriaContaInvest(Pessoa cliente, float saldo, Banco agencia){
