@@ -4,7 +4,7 @@ public class Conta {
 
     public Random gerador = new Random();
     public Pessoa cliente;
-    public float saldo;
+    public double saldo;
     public boolean ver;
     public int verificador;
     //Analisar a necessidade dessa instancia, se irei manter ou não
@@ -21,6 +21,7 @@ public class Conta {
         this.setCliente(cliente);
         this.saldo = saldo;
         this.agencia = agencia;
+        this.extrato = new ArrayList<Transacao>();
     }
 
     public void setCliente(Pessoa cliente) {
@@ -35,7 +36,7 @@ public class Conta {
         return this.cliente;
     }
 
-    public float getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
@@ -47,29 +48,40 @@ public class Conta {
         return this.numeroConta;
     }
 
-    public void setNumeroDaConta(){
-        this.ver = false;
-        while(!this.ver){
-            this.verificador = gerador.nextInt(10000000,99999999);
-            this.ver = true;
-            this.agencia.contasCorrent.forEach(contaPoupanca -> {
-                if (contaPoupanca.getNumeroConta() == this.verificador);
-                {
-                    this.ver = false;
-                }
-            });
-        }
-        this.numeroConta = verificador;
-        System.out.println(this.getNumeroConta());
-    }
+//    public void setNumeroDaConta(){
+//        System.out.println("Entrou");
+//        this.ver = false;
+//        while(!this.ver){
+//            this.verificador = gerador.nextInt(10000000,99999999);
+//            this.ver = true;
+//            int size;
+//            if(this.agencia.contasCorrent == null)
+//            {
+//                size = 0;
+//            }else{
+//                size = this.agencia.contasCorrent.size();
+//            }
+//            for(int i =0; i <= size; i++){
+//                if (this.agencia.contasCorrent(i).getNumeroConta() == this.verificador);
+//                {
+//                    this.ver = false;
+//                }
+//            }
+////            this.agencia.contasCorrent.forEach(contaPoupanca -> {
+////                
+////            });
+//        }
+//        this.numeroConta = verificador;
+//        System.out.println(this.getNumeroConta());
+//    }
 
-    public void deposito(float valor){
+    public void deposito(double valor){
         saldo += valor;
         Transacao recebimento = new Transacao(valor, this.numeroConta);
         extrato.add(recebimento);
     }
 
-    public void saque(float valor){
+    public void saque(double valor){
         if (valor <= saldo)
         {
             saldo -= valor;
