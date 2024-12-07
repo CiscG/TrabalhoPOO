@@ -3,14 +3,14 @@ package com.banco.dev.app;
 import java.util.*;
 
 public class Transacao {
-    public float valor;
+    public double valor;
     public Date data;
     public int emissor;
 
     ///Construtores da classe mãe
     Transacao(){}
     //Construotor recebendo parametros
-    Transacao(float valor, int emissor){
+    Transacao(double valor, int emissor){
         this.valor = valor;
         //this.SetValor(valor);
         //Não precisava definir como Date, pois ele já estava definido nos parametros
@@ -21,7 +21,7 @@ public class Transacao {
         this.valor = valor;
     }
     // Estava como int mas ela foi definida como float lá em cima
-    public float getValor(){
+    public double getValor(){
         return this.valor;
   }
      public Date getData(){
