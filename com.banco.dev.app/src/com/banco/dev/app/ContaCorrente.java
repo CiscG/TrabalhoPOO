@@ -11,11 +11,13 @@ public class ContaCorrente extends Conta {
   public ContaCorrente() {
   }
 
-  public ContaCorrente(Pessoa cliente, Banco agencia, float saldo) {
+  public ContaCorrente(Pessoa cliente, Banco agencia, double saldo) {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;
-    setNumeroDaConta();
+    this.numeroConta = gerador.nextInt(10000000, 99999999);
+    this.extrato = new ArrayList<Transacao>();
+    this.listaTrasacoes = new ArrayList<TransacaoCorrente>();
     setLimite();
   }
   public void setLimite(){
@@ -23,13 +25,17 @@ public class ContaCorrente extends Conta {
   }
   public void TrasacaoCorrente(int destino, float valor, int destinatario)
   {
-    TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario);
-    this.listaTrasacoes.add(transacao);
+      if(valor <= saldo){
+        TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario);
+        this.listaTrasacoes.add(transacao);
+      }else{
+          System.out.println("Saldo insuficiente para a transacao");
+      }
   }
 
   @Override
-  public void saque(float valor) {
-    float total = this.saldo + this.limite;
+  public void saque(double valor) {
+    double total = this.saldo + this.limite;
     if (valor <= total)
     {
       saldo -= valor;
