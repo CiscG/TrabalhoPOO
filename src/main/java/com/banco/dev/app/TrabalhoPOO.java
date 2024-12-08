@@ -9,6 +9,8 @@ public class TrabalhoPOO {
         int[] numeroContaCor = new int[2];
         int numeroContaPou;
         int numeroContaInv;
+        int op;
+        String tipo = null;
         ContaInvestimento contaInvTemp;
         ContaPoupanca contaPoupaTemp;
         int contaCliente;
@@ -98,12 +100,11 @@ public class TrabalhoPOO {
         contaPoupaTemp = new ContaPoupanca(novoCliente, agencia, 0f);
         contaPoupaTemp.deposito(novoCliente.getRenda() * 4);
         agencia.contasPoupa.add(contaPoupaTemp);
-
+        
         System.out.println("Digite o valor do deposito");
         valor = scanner.nextFloat();
         float finalValor = valor;
         agencia.contasPoupa.forEach(contaPoupanca -> contaPoupanca.deposito(finalValor));
-
 
         System.out.println("Conta Investimento");
 
@@ -127,19 +128,45 @@ public class TrabalhoPOO {
 
         contaInvTemp = new ContaInvestimento(novoCliente, 0f, agencia);
         contaInvTemp.deposito(novoCliente.getRenda() * 4);
+        numeroContaInv = contaInvTemp.numeroConta;
         agencia.contasPoupa.add(contaPoupaTemp);
 
         System.out.println("Digite o valor do compra");
         valor = scanner.nextFloat();
         float finalValor1 = valor;
         agencia.contasInve.forEach(contaInve -> {
-            contaInve.compraProduto(finalValor1, 1);
-            contaInve.compraProduto(finalValor1, 2);
-            contaInve.compraProduto(finalValor1, 3);
+            if(contaInve.numeroConta == numeroContaInv){
+                contaInve.compraProduto(finalValor1, 1);
+                contaInve.compraProduto(finalValor1, 2);
+                contaInve.compraProduto(finalValor1, 3);
+            }
+           
         });
         agencia.contasInve.forEach(contaInvestimento -> {
             contaInvestimento.produtos.forEach(produto -> System.out.println(produto.nome + " " + produto.valor + " " + produto.taxa));
         });
+        System.out.println("Digite o pruduto a ser vendido \n1. LCA \n2. CDB \n3. LCI");
+        op = scanner.nextInt();
+        switch(op){
+            case 1:
+                tipo = "LCA";
+                break;
+            case 2:
+                tipo = "CDB";
+                break;
+            case 3:
+                tipo = "LCI";
+                break;
+        }
+        String finalTipo = tipo;
+        agencia.contasInve.forEach(contaInv ->{
+            if(contaInv.numeroConta == numeroContaInv){
+                contaInv.produtos.forEach(produto -> {
+                   contaInv.venderProduto(finalTipo);
+                });
+            }
+        });
+        
         agencia.contasInve.forEach(contaInvestimento -> contaInvestimento.GetHistoricoExtrato());
 
 

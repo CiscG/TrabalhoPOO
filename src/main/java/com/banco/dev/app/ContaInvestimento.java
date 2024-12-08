@@ -93,7 +93,11 @@ public class ContaInvestimento extends Conta{
 
     @Override
     public void GetHistoricoExtrato() {
-        listaTransacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " " + transacao.getStatus()));
-        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+        if(listaTransacoes.size() != 0){
+            listaTransacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " " + transacao.getStatus()));
+        }
+        if(extrato.size() != 0){
+            extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+        }
     }
 }
