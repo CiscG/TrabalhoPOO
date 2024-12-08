@@ -3,13 +3,13 @@ public class Pessoa {
   String nome;
   int idade;
   int numeroCelular;
-  String tipoDePessoa;
-  int id;
+  //String tipoDePessoa;
+  long id;
   public double renda;
   
   Pessoa(){ }
 
-  Pessoa(String nome, int idade, int numeroCelular, int id, double renda){
+  Pessoa(String nome, int idade, int numeroCelular, long id, double renda){
     this.nome = nome;
     this.idade = idade;
     this.numeroCelular = numeroCelular;
@@ -29,7 +29,7 @@ public class Pessoa {
     this.numeroCelular = numeroCelular;
   }
 
-  public void setID(int id){
+  public void setID(long id){
     this.id = id;
   }
 
@@ -45,7 +45,7 @@ public class Pessoa {
     return this.idade;
   }
 
-  public int getID(){
+  public long getID(){
     return this.id;
   }
 

@@ -32,7 +32,7 @@ public class TrabalhoPOO {
         novoCliente.setNumeroCelular(scanner.nextInt());
 
         System.out.println("Digite seu Documento");
-        novoCliente.setID(scanner.nextInt());
+        novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
         novoCliente.setRenda(scanner.nextDouble());
@@ -57,7 +57,7 @@ public class TrabalhoPOO {
         novoCliente.setNumeroCelular(scanner.nextInt());
 
         System.out.println("Digite seu Documento");
-        novoCliente.setID(scanner.nextInt());
+        novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
         novoCliente.setRenda(scanner.nextFloat());
@@ -90,7 +90,7 @@ public class TrabalhoPOO {
         novoCliente.setNumeroCelular(scanner.nextInt());
 
         System.out.println("Digite seu Documento");
-        novoCliente.setID(scanner.nextInt());
+        novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
         novoCliente.setRenda(scanner.nextFloat());
@@ -120,7 +120,7 @@ public class TrabalhoPOO {
         novoCliente.setNumeroCelular(scanner.nextInt());
 
         System.out.println("Digite seu Documento");
-        novoCliente.setID(scanner.nextInt());
+        novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
         novoCliente.setRenda(scanner.nextFloat());

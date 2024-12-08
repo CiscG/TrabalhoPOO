@@ -14,15 +14,6 @@ public class Banco {
     this.contasInve = new ArrayList<ContaInvestimento>();
     this.contasCorrent = new ArrayList<ContaCorrente>();
     this.contasPoupa = new ArrayList<ContaPoupanca>();
-     if(contasInve.size() == 0){
-            System.out.println("teste");
-        }
-    if(contasCorrent.size() == 0){
-            System.out.println("teste");
-        }
-    if(contasPoupa.size() == 0){
-            System.out.println("teste");
-        }
   }
 
   void CriaContaInvest(Pessoa cliente, float saldo, Banco agencia){
