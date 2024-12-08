@@ -22,6 +22,7 @@ public class Conta {
         this.saldo = saldo;
         this.agencia = agencia;
         this.extrato = new ArrayList<Transacao>();
+      
     }
 
     public void setCliente(Pessoa cliente) {
