@@ -9,7 +9,8 @@ public class ContaInvestimento extends Conta{
         this.cliente = cliente;
         this.saldo = saldo;
         this.agencia = agencia;
-        this.numeroConta = gerador.nextInt(10000000, 99999999);
+//        this.numeroConta = gerador.nextInt(10000000, 99999999);
+        setNumeroDaConta();
         this.extrato = new ArrayList<Transacao>();
         this.listaTransacoes = new ArrayList<TransacaoInvestimento>();
         this.produtos = new ArrayList<Produto>();
@@ -18,22 +19,25 @@ public class ContaInvestimento extends Conta{
     public ContaInvestimento(){
     }
 
-//    @Override
-//    public void setNumeroDaConta(){
-//        this.ver = false;
-//        while(!this.ver){
-//            this.verificador = gerador.nextInt(10000000,99999999);
-//            this.ver = true;
-//            this.agencia.contasInve.forEach(contaPoupanca -> {
-//                if (contaPoupanca.getNumeroConta() == this.verificador);
-//                {
-//                    this.ver = false;
-//                }
-//            });
-//        }
-//        this.numeroConta = verificador;
-//        System.out.println(this.getNumeroConta());
-//    }
+    @Override
+    public void setNumeroDaConta(){
+       this.ver = false;
+        if(agencia.contasInve.size() == 0){
+            this.verificador = gerador.nextInt(100000,999999);
+        }else{
+         while(!this.ver){
+            this.verificador = gerador.nextInt(100000,999999);
+            this.ver = true;
+            agencia.contasInve.forEach(conta -> {
+                if(conta.numeroConta == verificador){
+                    ver = false;
+                }
+            });
+         }
+        }
+        this.numeroConta = verificador;
+        System.out.println(this.getNumeroConta());
+    }
 
     public void compraProduto(float valor, int tipoDeProduto){
         float taxa;

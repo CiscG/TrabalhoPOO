@@ -15,7 +15,8 @@ public class ContaCorrente extends Conta {
     this.cliente = cliente;
     this.saldo = saldo;
     this.agencia = agencia;
-    this.numeroConta = gerador.nextInt(10000000, 99999999);
+//    this.numeroConta = gerador.nextInt(10000000, 99999999);
+    setNumeroDaConta();
     this.extrato = new ArrayList<Transacao>();
     this.listaTrasacoes = new ArrayList<TransacaoCorrente>();
     setLimite();
@@ -25,12 +26,12 @@ public class ContaCorrente extends Conta {
   }
   public void TrasacaoCorrente(int destino, float valor, int destinatario)
   {
-      if(valor <= saldo){
+    if(valor <= saldo){
         TransacaoCorrente transacao = new TransacaoCorrente(valor, destino, destinatario);
         this.listaTrasacoes.add(transacao);
-      }else{
-          System.out.println("Saldo insuficiente para a transacao");
-      }
+    }else{
+        System.out.println("Saldo insuficiente para a transacao");
+    }
   }
 
   @Override
@@ -50,7 +51,11 @@ public class ContaCorrente extends Conta {
 
   @Override
   public void GetHistoricoExtrato() {
-    listaTrasacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " "+ transacao.getDestinatario()));
-    extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+      if(this.listaTrasacoes.size() != 0){
+        this.listaTrasacoes.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor() + " "+ transacao.getDestinatario()));
+      }
+      if(this.extrato.size() != 0){
+        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+      }
   }
 }

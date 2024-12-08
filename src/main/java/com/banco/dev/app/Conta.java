@@ -49,37 +49,25 @@ public class Conta {
         return this.numeroConta;
     }
 
-//    public void setNumeroDaConta(){
-//        System.out.println("Entrou");
-//        this.ver = false;
-//        if(agencia.contasCorrent.size() == 0){
-//            this.verificador = gerador.nextInt(10000000,99999999);
-//        }else{
-//         while(!this.ver){
-//            this.verificador = gerador.nextInt(10000000,99999999);
-//            this.ver = true;
-//            int size;
-//            if(this.agencia.contasCorrent == null)
-//            {
-//                size = 0;
-//            }else{
-//                size = this.agencia.contasCorrent.size();
-//            }
-//            for(int i =0; i <= size; i++){
-//                if (this.agencia.contasCorrent(i).getNumeroConta() == this.verificador);
-//                {
-//                    this.ver = false;
-//                }
-//            }
-////            this.agencia.contasCorrent.forEach(contaPoupanca -> {
-////                
-////            });
-//        }
-//
-//        }
-//               this.numeroConta = verificador;
-//        System.out.println(this.getNumeroConta());
-//    }
+    public void setNumeroDaConta(){
+        System.out.println("Entrou");
+        this.ver = false;
+        if(agencia.contasCorrent.size() == 0){
+            this.verificador = gerador.nextInt(10000000,99999999);
+        }else{
+         while(!this.ver){
+            this.verificador = gerador.nextInt(10000000,99999999);
+            this.ver = true;
+            agencia.contasCorrent.forEach(conta -> {
+                if(conta.numeroConta == verificador){
+                    ver = false;
+                }
+            });
+         }
+        }
+        this.numeroConta = verificador;
+        System.out.println(this.getNumeroConta());
+    }
 
     public void deposito(double valor){
         saldo += valor;
@@ -102,6 +90,8 @@ public class Conta {
         extrato.add(transacao);
     }
     public void GetHistoricoExtrato() {
-        extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+        if(extrato.size() != 0){
+            extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
+        }
     }
 }
