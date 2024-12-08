@@ -52,7 +52,10 @@ public class Conta {
 //    public void setNumeroDaConta(){
 //        System.out.println("Entrou");
 //        this.ver = false;
-//        while(!this.ver){
+//        if(agencia.contasCorrent.size() == 0){
+//            this.verificador = gerador.nextInt(10000000,99999999);
+//        }else{
+//         while(!this.ver){
 //            this.verificador = gerador.nextInt(10000000,99999999);
 //            this.ver = true;
 //            int size;
@@ -72,7 +75,9 @@ public class Conta {
 ////                
 ////            });
 //        }
-//        this.numeroConta = verificador;
+//
+//        }
+//               this.numeroConta = verificador;
 //        System.out.println(this.getNumeroConta());
 //    }
 
