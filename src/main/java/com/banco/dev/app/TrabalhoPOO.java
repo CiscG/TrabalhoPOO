@@ -31,7 +31,7 @@ public class TrabalhoPOO {
         System.out.println("Digite seu Telefone");
         novoCliente.setNumeroCelular(scanner.nextInt());
 
-        System.out.println("Digite seu Documento");
+        System.out.println("Digite seu CPF");
         novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
@@ -56,7 +56,7 @@ public class TrabalhoPOO {
         System.out.println("Digite seu Telefone");
         novoCliente.setNumeroCelular(scanner.nextInt());
 
-        System.out.println("Digite seu Documento");
+        System.out.println("Digite seu CPF");
         novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
@@ -89,7 +89,7 @@ public class TrabalhoPOO {
         System.out.println("Digite seu Telefone");
         novoCliente.setNumeroCelular(scanner.nextInt());
 
-        System.out.println("Digite seu Documento");
+        System.out.println("Digite seu CPF");
         novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
@@ -119,7 +119,7 @@ public class TrabalhoPOO {
         System.out.println("Digite seu Telefone");
         novoCliente.setNumeroCelular(scanner.nextInt());
 
-        System.out.println("Digite seu Documento");
+        System.out.println("Digite seu CPF");
         novoCliente.setID(scanner.nextLong());
 
         System.out.println("Digite sua Renda");
