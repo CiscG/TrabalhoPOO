@@ -86,9 +86,6 @@ public class Conta {
             System.out.println("Valor para saque indisponivel");
         }
     }
-    public void receberTransacao(Transacao transacao) {
-        extrato.add(transacao);
-    }
     public void GetHistoricoExtrato() {
         if(extrato.size() != 0){
             extrato.forEach(transacao -> System.out.println(transacao.getData() + "  " + transacao.getValor() + " " + transacao.getEmissor()));
